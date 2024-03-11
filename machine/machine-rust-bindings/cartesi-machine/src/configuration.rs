@@ -537,4 +537,3 @@ impl From<cartesi_machine_sys::cm_machine_runtime_config> for RuntimeConfig {
 pub fn free_cm_memory_range_config_cstr(config: &mut cartesi_machine_sys::cm_memory_range_config) {
     free_cstr(config.image_filename);
 }
-
