@@ -51,7 +51,7 @@ function Sender:new(account_index)
 end
 
 local cast_send_template = [[
-cast send --private-key "%s" --rpc-url "%s" "%s" "%s" %s 2>&1
+cast send --legacy --private-key "%s" --rpc-url "%s" "%s" "%s" %s 2>&1
 ]]
 
 function Sender:_send_tx(tournament_address, sig, args)
