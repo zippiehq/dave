@@ -47,10 +47,10 @@ async fn main() -> Result<()> {
             info!("Tournament finished, {:?}", r);
             break;
         }
-        tokio::time::sleep(Duration::from_secs(1)).await;
 
         let tournament_states = reader.fetch_from_root(root_tournament).await?;
         gc.react(&sender, tournament_states).await?;
+        
         tokio::time::sleep(Duration::from_secs(1)).await;
     }
 
